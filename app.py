@@ -37,11 +37,11 @@ def test():
     query = f"""select TS, Jour, Time, Name, Id_CPT, Value from BigData.dbo.Table_Index_Histo where Id_CPT=? 
         and Jour >= '{date_debut}' and Jour <'{date_fin}' order by TS  """
 
-    record = pd.read_sql(query, db, params={data[id]})
+    record = pd.read_sql(query, db, params={data["id"]})
 
     # error = open(r"C:\Users\SGE\Desktop\Integration_Conso\Extraction_CPT_clients_annee_courante\Clients\erreur.txt",
     #              "w")
-    return record
+    return record.to_csv()
     data = pd.DataFrame([])
 
     for i in range(len(df)):
