@@ -1,0 +1,16 @@
+version: '3'
+services:
+  flask:
+    build: .
+        # equivalent to -it in docker run command (needed for react app)
+    container_name: flask
+    network_mode: host
+    #        networks:
+    #            rest-network:
+    #               aliases:
+    #                  - reverse-proxy
+#    ports:
+      # 5000 / 3000 ports are the only ports open on the OSIRIM VM
+#      - 3000:3000
+#    volumes:
+#      - ./react-ui_datalake_nots/src:/app/src
