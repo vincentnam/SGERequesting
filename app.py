@@ -18,7 +18,7 @@ def test():
     data = request.form.to_dict()
 
     start_time = time.time()
-    now = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
+    now = datetime.today().strftime('%Y-%m-%dT%H:%M:%S')
     try :
         date_debut = data["trip-start"]
         date_fin = data["trip-end"]
