@@ -56,7 +56,7 @@ def test():
     output.seek(0)
 
     #finally return the file
-    return send_file(output, attachment_filename="Requete_BD_SGE_"+now+".xlsx", as_attachment=True)
+    return send_file(output, attachment_filename="Requete_BD_SGE_"+now+"_"+id_cpt+".xlsx", as_attachment=True)
 
 
 
