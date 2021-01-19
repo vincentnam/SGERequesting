@@ -23,7 +23,7 @@ def test():
     date_debut = data["trip-start"]
     date_fin = data["trip-end"]
     db = pyodbc.connect(
-        'driver={SQL Server};server=127.0.0.1,20001\MSSQLQERVER;DATABASE=BigData;UID=sa;PWD=neoData2.password.SGE.MsSQL;')
+        'driver={ODBC Driver 17 for SQL Server};server=127.0.0.1,20001;DATABASE=BigData;UID=sa;PWD=neoData2.password.SGE.MsSQL;')
 
     # recuperer liste des colonnes adequates du fichier criteres
     file = r"C:\Users\SGE\Desktop\Integration_Conso\Extraction_CPT_clients_annee_courante\critères pour INES V4.xlsx"
