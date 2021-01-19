@@ -18,6 +18,7 @@ def test():
     data = request.form.to_dict()
 
     start_time = time.time()
+    now = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
     try :
         date_debut = data["trip-start"]
         date_fin = data["trip-end"]
@@ -41,7 +42,7 @@ def test():
     writer = pd.ExcelWriter(output, engine='xlsxwriter')
 
     #taken from the original question
-    record.to_excel(writer, startrow = 0, merge_cells = False, sheet_name = "Sheet_1")
+    record.to_excel(writer, startrow = 0, merge_cells = False, sheet_name = "Réponse de requête")
     # workbook = writer.book
     # worksheet = writer.sheets["Sheet_1"]
     # format = workbook.add_format()
@@ -55,7 +56,7 @@ def test():
     output.seek(0)
 
     #finally return the file
-    return send_file(output, attachment_filename="testing.xlsx", as_attachment=True)
+    return send_file(output, attachment_filename="Requete_BD_SGE_"+now+".xlsx", as_attachment=True)
 
 
 
