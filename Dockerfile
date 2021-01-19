@@ -1,5 +1,5 @@
-FROM tiangolo/uwsgi-nginx-flask:python3.6-alpine3.7
-RUN apk --update add bash nano
+FROM python:latest
+RUN apt-get update && apt-get -y install unixodbc-dev
 WORKDIR /app
 ENV STATIC_URL /static
 ENV STATIC_PATH /app/static

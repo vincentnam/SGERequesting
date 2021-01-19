@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action = "http://localhost:5000/request" method="post" >
+    <label for="start">Date de début:</label>
+
+    <input type="date" id="start" name="trip-start"
+           value="yyyy-dd-mm"
+           min="1900-01-01" max="3000-12-31">
+    <label for="end">Date de fin:</label>
+
+    <input type="date" id="end" name="trip-end"
+           value="yyyy-dd-mm"
+           min="1900-01-01" max="3000-12-31">
+    <label for="idcapteur">Identifiant du capteur :</label>
+    <input type="text" id="idcapteur" name="id" value="">
+    <input type="submit" value="Download">
+{#    <button onclick="window.location.href='http://localhost:5000/returnvalue'">Télécharger</button>#}
+</form>
+</body>
+</html>

@@ -12,5 +12,5 @@ services:
 #    ports:
       # 5000 / 3000 ports are the only ports open on the OSIRIM VM
 #      - 3000:3000
-#    volumes:
-#      - ./react-ui_datalake_nots/src:/app/src
+    volumes:
+      - ./:/app/
