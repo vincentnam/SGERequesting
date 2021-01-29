@@ -15,7 +15,7 @@ def hello_world():
     return render_template("index.html")
 
 @app.route('/request', methods=["POST"])
-def test():
+def request():
     data = request.form.to_dict()
 
     start_time = time.time()
