@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action = "http://localhost:5000/request" method="post" >
+<form action = "{{ url_for("endpoint") }}" method="post" >
     <label for="start">Date de début:</label>
 
     <input type="date" id="start" name="trip-start"
