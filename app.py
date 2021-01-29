@@ -5,6 +5,7 @@ import pandas as pd
 import time
 import datetime
 
+PORT = 8001
 
 app = Flask(__name__)
 
@@ -61,5 +62,5 @@ def test():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=PORT)
 
