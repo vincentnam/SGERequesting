@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<form action = "{{ url_for("request") }}" method="post" >
+{# Find a way to redirect with {{url_for("request")  }} due to NGINX Redirect proxy pass : as is, it redirect to influxdb url #}
+<form action = "neodata2.univ-tlse3.fr/sge/request" method="post" >
     <label for="start">Date de début:</label>
 
     <input type="date" id="start" name="trip-start"
