@@ -8,7 +8,7 @@ import datetime
 PORT = 8001
 
 app = Flask(__name__)
-
+app.config["APPLICATION_ROOT"]="/sge"
 
 @app.route('/')
 def hello_world():
