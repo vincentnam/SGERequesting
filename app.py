@@ -24,11 +24,13 @@ def request_fun():
         date_debut = data["trip-start"]
         date_fin = data["trip-end"]
         id_cpt =  data["id"]
+        user = data["user"]
+        mdp = data["mdp"]
     except:
         return "Il faut remplir la totalité des champs."
 
     db = pyodbc.connect(
-        'driver={ODBC Driver 17 for SQL Server};server=127.0.0.1,20001;DATABASE=BigData;UID=sa;PWD=neoData2.password.SGE.MsSQL;')
+        'driver={ODBC Driver 17 for SQL Server};server=127.0.0.1,20001;DATABASE=BigData;UID='+str(user)+';PWD='+str(mdp)+';')
 
     query = f"""select TS, Jour, Time, Name, Id_CPT, Value from BigData.dbo.Table_Index_Histo where Id_CPT=? 
         and Jour >= '{date_debut}' and Jour <'{date_fin}' order by TS  """
